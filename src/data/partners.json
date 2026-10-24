@@ -1,0 +1,16 @@
+[
+  {
+    "id": "parceiro-1",
+    "title": "Parceiros",
+    "description": "Lorem ipsum dolor sit amet, consectetur",
+    "image": "/images/parceiros.jpg",
+    "cta": { "label": "Confira", "href": "#" }
+  },
+  {
+    "id": "parceiro-2",
+    "title": "Parceiros",
+    "description": "Lorem ipsum dolor sit amet, consectetur",
+    "image": "/images/parceiros.jpg",
+    "cta": { "label": "Confira", "href": "#" }
+  }
+]

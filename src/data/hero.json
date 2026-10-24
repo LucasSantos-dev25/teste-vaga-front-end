@@ -1,0 +1,7 @@
+{
+  "title": "Venha conhecer nossas promoções",
+  "highlight": "50% Off",
+  "subtitle": "nos produtos",
+  "cta": { "label": "Ver produto", "href": "#vitrine" },
+  "image": "/images/hero-banner.jpg"
+}

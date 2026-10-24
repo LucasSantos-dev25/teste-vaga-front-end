@@ -1,0 +1,51 @@
+{
+  "benefits": [
+    {
+      "icon": "shield",
+      "before": "Compra",
+      "highlight": "100% segura"
+    },
+    {
+      "icon": "truck",
+      "highlight": "Frete grátis",
+      "after": "acima de R$ 200"
+    },
+    {
+      "icon": "card",
+      "highlight": "Parcele",
+      "after": "suas compras"
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Todas categorias",
+      "href": "#"
+    },
+    {
+      "label": "Supermercado",
+      "href": "#"
+    },
+    {
+      "label": "Livros",
+      "href": "#"
+    },
+    {
+      "label": "Moda",
+      "href": "#"
+    },
+    {
+      "label": "Lançamentos",
+      "href": "#"
+    },
+    {
+      "label": "Ofertas do dia",
+      "href": "#",
+      "highlighted": true
+    },
+    {
+      "label": "Assinatura",
+      "href": "#",
+      "icon": "crown"
+    }
+  ]
+}

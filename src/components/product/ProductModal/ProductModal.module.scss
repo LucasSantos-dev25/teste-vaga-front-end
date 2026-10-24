@@ -1,0 +1,142 @@
+@use '@/styles/abstracts' as *;
+
+.dialog {
+  width: min(46.5rem, calc(100% - #{$space-8})); // 744px
+  max-height: calc(100dvh - #{$space-8});
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: $radius-md;
+  background-color: $color-white;
+  color: $color-text;
+  box-shadow: $shadow-lg;
+
+  &::backdrop {
+    background-color: rgba(255, 255, 255, 0.55);
+  }
+
+  &[open] {
+    animation: modal-in 200ms ease-out;
+  }
+
+  &[open]::backdrop {
+    animation: backdrop-in 200ms ease-out;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.content {
+  position: relative;
+  display: grid;
+  gap: $space-6;
+  padding: $space-10 $space-6 $space-8;
+
+  @include up('md') {
+    grid-template-columns: 14.5rem 1fr;
+    align-items: center;
+    gap: $space-12;
+    padding: $space-12 $space-12 $space-12 $space-16;
+  }
+}
+
+.close {
+  @include button-reset;
+  @include flex-center;
+  position: absolute;
+  top: $space-4;
+  right: $space-4;
+  width: 2rem;
+  height: 2rem;
+  color: $color-text;
+  transition: color $transition-fast;
+
+  @include hover {
+    color: $color-primary;
+  }
+}
+
+.media {
+  @include flex-center;
+}
+
+.image {
+  max-height: 12.5rem;
+  object-fit: contain;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: $fs-md;
+  font-weight: $fw-regular;
+  line-height: 1.3;
+  color: $color-text;
+  text-transform: uppercase;
+}
+
+.price {
+  margin-top: $space-3;
+  font-size: $fs-md;
+  font-weight: $fw-semibold;
+  color: $color-text;
+}
+
+.description {
+  max-width: 17rem;
+  margin-top: $space-4;
+  font-size: $fs-xxs;
+  line-height: 1.5;
+  color: $color-text-light;
+}
+
+.details {
+  align-self: flex-start;
+  margin-top: $space-1;
+  font-size: $fs-xxs;
+  font-weight: $fw-semibold;
+  color: $color-primary;
+
+  @include hover {
+    text-decoration: underline;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  margin-top: $space-5;
+}
+
+.buy {
+  @include button-reset;
+  flex: 1;
+  max-width: 11.25rem;
+  height: 2.25rem;
+  border-radius: $radius-sm;
+  background-color: $color-yellow;
+  color: $color-navy;
+  font-size: $fs-xxs;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  transition: background-color $transition-fast;
+
+  @include hover {
+    background-color: $color-yellow-dark;
+  }
+}
