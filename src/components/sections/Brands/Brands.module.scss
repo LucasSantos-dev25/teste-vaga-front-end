@@ -1,0 +1,47 @@
+@use '@/styles/abstracts' as *;
+
+.brands {
+  padding-block: $space-12;
+}
+
+.list {
+  display: flex;
+  gap: $space-6;
+  margin-top: $space-8;
+  padding: $space-4 $space-2 $space-6;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include up('lg') {
+    justify-content: center;
+    gap: $space-10;
+    overflow: visible;
+  }
+}
+
+.brand {
+  @include flex-center;
+  flex-shrink: 0;
+  width: 10rem;
+  height: 10rem;
+  border-radius: $radius-full;
+  background-color: $color-white;
+  box-shadow: $shadow-md;
+  transition:
+    transform $transition-base,
+    box-shadow $transition-base;
+
+  @include hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-lg;
+  }
+
+  @include up('lg') {
+    width: 13.125rem; // 210px
+    height: 13.125rem;
+  }
+}

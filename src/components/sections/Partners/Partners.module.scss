@@ -1,0 +1,55 @@
+@use '@/styles/abstracts' as *;
+
+.partners {
+  padding-block: $space-8;
+}
+
+.grid {
+  display: grid;
+  gap: $space-5;
+
+  @include up('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 16rem;
+  padding: $space-8 $space-6;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.25) 100%),
+    var(--partner-image) center / cover no-repeat,
+    linear-gradient(135deg, #3a2a1a 0%, #1a1410 100%);
+  color: $color-white;
+
+  @include up('md') {
+    min-height: 21.875rem; // 350px
+    padding: $space-10 $space-12;
+  }
+}
+
+.title {
+  font-size: $fs-2xl;
+  font-weight: $fw-bold;
+  line-height: 1.2;
+}
+
+.description {
+  max-width: 13rem;
+  margin-top: $space-3;
+  font-size: $fs-sm;
+  font-weight: $fw-regular;
+  line-height: 1.5;
+}
+
+.cta {
+  min-width: 8.75rem;
+  margin-top: $space-8;
+  letter-spacing: 0.06em;
+}
