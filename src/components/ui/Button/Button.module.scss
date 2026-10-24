@@ -1,0 +1,73 @@
+@use '@/styles/abstracts' as *;
+
+.button {
+  @include button-reset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  border-radius: $radius-sm;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    background-color $transition-fast,
+    transform $transition-fast;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Variantes
+.primary {
+  background-color: $color-primary;
+  color: $color-white;
+
+  @include hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+.yellow {
+  background-color: $color-yellow;
+  color: $color-navy;
+
+  @include hover {
+    background-color: $color-yellow-dark;
+  }
+}
+
+// Tamanhos
+.sm {
+  height: 2.25rem;
+  padding-inline: $space-4;
+  font-size: $fs-xxs;
+}
+
+.md {
+  height: 2.75rem;
+  padding-inline: $space-6;
+  font-size: $fs-xs;
+}
+
+// CTA do banner ("Ver produto"): sem caixa alta, mais largo
+.lg {
+  height: 3.25rem;
+  min-width: 12.5rem;
+  padding-inline: $space-8;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  text-transform: none;
+}
+
+.fullWidth {
+  display: flex;
+  width: 100%;
+}
