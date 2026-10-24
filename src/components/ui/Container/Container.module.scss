@@ -1,0 +1,8 @@
+@use '@/styles/abstracts' as *;
+
+.container {
+  width: 100%;
+  max-width: calc(#{$container-width} + #{$container-gutter} * 2);
+  margin-inline: auto;
+  padding-inline: $container-gutter;
+}

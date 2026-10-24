@@ -1,0 +1,43 @@
+@use '@/styles/abstracts' as *;
+
+.link {
+  display: inline-flex;
+}
+
+.logo {
+  --logo-size: 2.25rem;
+
+  display: inline-flex;
+  align-items: center;
+  font-size: calc(var(--logo-size) * 0.62);
+  font-weight: $fw-bold;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.badge {
+  @include flex-center;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  padding-left: 0.18em;
+  border-radius: $radius-full;
+  background-color: $color-yellow;
+  color: $color-white;
+}
+
+.word {
+  margin-left: -0.08em;
+  color: $color-navy;
+}
+
+.sm {
+  --logo-size: 1.5rem;
+}
+
+.md {
+  --logo-size: 2.25rem;
+}
+
+.lg {
+  --logo-size: 2.6rem;
+}
