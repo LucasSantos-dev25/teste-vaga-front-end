@@ -1,0 +1,75 @@
+{
+  "success": true,
+  "products": [
+    {
+      "productName": "Iphone 11 PRO MAX BRANCO 1",
+      "descriptionShort": "Iphone 11 PRO MAX BRANCO 1",
+      "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      "price": 15000,
+      "listPrice": 16050
+    },
+    {
+      "productName": "IPHONE 13 MINI 1",
+      "descriptionShort": "IPHONE 13 MINI 1",
+      "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      "price": 9000,
+      "listPrice": 9630
+    },
+    {
+      "productName": "Iphone 11 PRO MAX BRANCO 2",
+      "descriptionShort": "Iphone 11 PRO MAX BRANCO 2",
+      "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      "price": 14990,
+      "listPrice": 16040
+    },
+    {
+      "productName": "IPHONE 13 MINI 2",
+      "descriptionShort": "IPHONE 13 MINI 2",
+      "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      "price": 12000,
+      "listPrice": 12840
+    },
+    {
+      "productName": "Iphone 11 PRO MAX BRANCO 3",
+      "descriptionShort": "Iphone 11 PRO MAX BRANCO 3",
+      "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      "price": 4550,
+      "listPrice": 4870
+    },
+    {
+      "productName": "IPHONE 13 MINI 3",
+      "descriptionShort": "IPHONE 13 MINI 3",
+      "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      "price": 38000,
+      "listPrice": 40660
+    },
+    {
+      "productName": "Iphone 11 PRO MAX BRANCO 4",
+      "descriptionShort": "Iphone 11 PRO MAX BRANCO 4",
+      "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      "price": 42000,
+      "listPrice": 44940
+    },
+    {
+      "productName": "IPHONE 13 MINI 4",
+      "descriptionShort": "IPHONE 13 MINI 4",
+      "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      "price": 520,
+      "listPrice": 560
+    },
+    {
+      "productName": "Iphone 11 PRO MAX BRANCO 5",
+      "descriptionShort": "Iphone 11 PRO MAX BRANCO 5",
+      "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      "price": 149990,
+      "listPrice": 160490
+    },
+    {
+      "productName": "IPHONE 13 MINI 5",
+      "descriptionShort": "IPHONE 13 MINI 5",
+      "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+      "price": 100000,
+      "listPrice": 107000
+    }
+  ]
+}

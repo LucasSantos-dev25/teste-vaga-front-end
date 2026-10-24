@@ -1,0 +1,9 @@
+[
+  { "id": "tecnologia", "label": "Tecnologia", "icon": "devices" },
+  { "id": "supermercado", "label": "Supermercado", "icon": "store" },
+  { "id": "bebidas", "label": "Bebidas", "icon": "drinks" },
+  { "id": "ferramentas", "label": "Ferramentas", "icon": "tools" },
+  { "id": "saude", "label": "Saúde", "icon": "health" },
+  { "id": "esportes", "label": "Esportes e Fitness", "icon": "fitness" },
+  { "id": "moda", "label": "Moda", "icon": "fashion" }
+]

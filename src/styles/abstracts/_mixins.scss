@@ -1,0 +1,81 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// Media query mobile-first: @include up('md') { ... }
+@mixin up($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if not $value {
+    @error "Breakpoint `#{$breakpoint}` não existe em $breakpoints.";
+  }
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+// Media query desktop-first: @include down('md') { ... }
+@mixin down($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if not $value {
+    @error "Breakpoint `#{$breakpoint}` não existe em $breakpoints.";
+  }
+
+  @media (max-width: ($value - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Remove estilos nativos de <button>
+@mixin button-reset {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+// Esconde visualmente mas mantém para leitores de tela
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Limita texto a N linhas com reticências
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// Hover só em dispositivos com ponteiro (evita hover "preso" no touch)
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin focus-ring($color: $color-primary) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: 2px;
+  }
+}

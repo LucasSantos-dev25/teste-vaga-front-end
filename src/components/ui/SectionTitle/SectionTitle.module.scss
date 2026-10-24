@@ -1,0 +1,27 @@
+@use '@/styles/abstracts' as *;
+
+.title {
+  font-size: $fs-lg;
+  font-weight: $fw-bold;
+  line-height: 1.3;
+  color: $color-primary;
+  text-align: center;
+
+  @include up('md') {
+    font-size: $fs-xl;
+  }
+}
+
+.withLines {
+  display: flex;
+  align-items: center;
+  gap: $space-5;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: $color-gray-200;
+  }
+}

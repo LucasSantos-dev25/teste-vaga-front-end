@@ -1,0 +1,186 @@
+@use '@/styles/abstracts' as *;
+
+.header {
+  position: relative;
+  z-index: $z-header;
+  background-color: $color-white;
+}
+
+// ---------- Faixa de benefícios ----------
+.topbar {
+  border-bottom: 1px solid $color-gray-200;
+}
+
+.benefits {
+  display: flex;
+  justify-content: flex-start;
+  gap: $space-6;
+  padding-block: $space-2;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  @include up('md') {
+    justify-content: center;
+    gap: $space-20;
+  }
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  flex-shrink: 0;
+  font-size: $fs-xxs;
+  color: $color-text-light;
+
+  svg {
+    color: $color-text-light;
+  }
+
+  strong {
+    font-weight: $fw-semibold;
+    color: $color-accent;
+  }
+}
+
+// ---------- Logo, busca e ações ----------
+.main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'logo actions'
+    'search search';
+  align-items: center;
+  gap: $space-4;
+  padding-block: $space-4;
+
+  > :first-child {
+    grid-area: logo;
+  }
+
+  > nav {
+    grid-area: actions;
+    justify-self: end;
+  }
+
+  @include up('md') {
+    grid-template-columns: auto minmax(0, 40rem) auto;
+    grid-template-areas: 'logo search actions';
+    justify-content: space-between;
+    gap: $space-8;
+    padding-block: $space-5;
+  }
+}
+
+.search {
+  grid-area: search;
+  position: relative;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  height: 2.875rem;
+  padding: 0 3.25rem 0 $space-4;
+  border: 0;
+  border-radius: $radius-md;
+  background-color: $color-gray-150;
+  font-size: $fs-xs;
+  color: $color-text;
+
+  &::placeholder {
+    color: $color-text-light;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 0;
+  }
+
+  // Remove o "x" nativo do input search
+  &::-webkit-search-cancel-button {
+    appearance: none;
+  }
+}
+
+.searchButton {
+  @include button-reset;
+  @include flex-center;
+  position: absolute;
+  top: 50%;
+  right: $space-3;
+  width: 2rem;
+  height: 2rem;
+  color: $color-text-light;
+  transform: translateY(-50%);
+  transition: color $transition-fast;
+
+  @include hover {
+    color: $color-accent;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+
+  @include up('lg') {
+    gap: $space-8;
+  }
+}
+
+.action {
+  display: flex;
+  color: $color-text-light;
+  transition: color $transition-fast;
+
+  @include hover {
+    color: $color-accent;
+  }
+}
+
+// ---------- Menu de categorias ----------
+.nav {
+  border-radius: 0 0 $radius-sm $radius-sm;
+  box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.12);
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-6;
+  padding: $space-3 $space-4;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include up('lg') {
+    padding-inline: $space-10;
+  }
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: $fs-xxs;
+  font-weight: $fw-medium;
+  color: $color-text-light;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color $transition-fast;
+
+  @include hover {
+    color: $color-accent;
+  }
+}
+
+.navLinkHighlighted {
+  font-weight: $fw-semibold;
+  color: $color-accent;
+}

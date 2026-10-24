@@ -1,0 +1,97 @@
+@use '@/styles/abstracts' as *;
+
+.main {
+  background-color: $color-gray-100;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: $space-10;
+  padding-block: $space-10;
+
+  @include up('lg') {
+    flex-direction: row;
+    padding-inline: $space-20;
+    padding-block: $space-10 $space-12;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+
+  @include up('lg') {
+    flex: 0 0 26.5rem;
+    padding-block: $space-4;
+    padding-right: $space-10;
+    border-right: 1px solid $color-gray-200;
+  }
+}
+
+.description {
+  max-width: 18rem;
+  font-size: $fs-xs;
+  line-height: 1.5;
+  color: $color-text-muted;
+}
+
+.socials {
+  display: flex;
+  gap: $space-6;
+}
+
+.social {
+  display: flex;
+  color: $color-text;
+  transition: color $transition-fast;
+
+  @include hover {
+    color: $color-primary;
+  }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: $space-8;
+
+  @include up('lg') {
+    display: flex;
+    gap: $space-16;
+    padding-top: $space-6;
+    padding-left: $space-20;
+  }
+}
+
+.columnTitle {
+  margin-bottom: $space-4;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  color: $color-text-muted;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.link {
+  font-size: $fs-xs;
+  color: $color-text-light;
+  letter-spacing: 0.02em;
+  transition: color $transition-fast;
+
+  @include hover {
+    color: $color-primary;
+  }
+}
+
+.copyright {
+  padding: $space-4 $container-gutter;
+  font-size: $fs-xxs;
+  color: $color-text-muted;
+  text-align: center;
+}

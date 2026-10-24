@@ -1,0 +1,107 @@
+@use '@/styles/abstracts' as *;
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: $space-5 $space-4 $space-4;
+  border-radius: $radius-md;
+  background-color: $color-white;
+  box-shadow: $shadow-sm;
+  transition:
+    box-shadow $transition-base,
+    transform $transition-base;
+
+  @include hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+
+  // Foco do botão "esticado" aparece no card inteiro
+  &:has(.stretched:focus-visible) {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+.media {
+  @include flex-center;
+  height: 13.125rem; // 210px
+}
+
+.image {
+  width: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: $space-5;
+}
+
+.name {
+  @include line-clamp(2);
+  min-height: 3em;
+  font-size: $fs-sm;
+  font-weight: $fw-regular;
+  line-height: 1.5;
+  color: $color-text;
+}
+
+.stretched {
+  @include button-reset;
+  text-align: left;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  margin-top: $space-4;
+}
+
+.listPrice {
+  font-size: $fs-xs;
+  color: $color-text-light;
+}
+
+.price {
+  font-size: $fs-md;
+  font-weight: $fw-bold;
+  line-height: 1.4;
+  color: $color-text;
+}
+
+.installments {
+  margin-top: $space-1;
+  font-size: $fs-xxs;
+  color: $color-text;
+}
+
+.shipping {
+  margin-top: $space-2;
+  margin-bottom: $space-4;
+  font-size: $fs-xxs;
+  font-weight: $fw-medium;
+  color: $color-primary;
+}
+
+.buy {
+  position: relative;
+  z-index: 1; // acima do botão esticado
+  margin-top: auto; // mantém os botões alinhados entre cards
+}

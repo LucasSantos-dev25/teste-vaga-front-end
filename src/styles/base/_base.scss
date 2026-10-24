@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $fs-sm;
+  font-weight: $fw-regular;
+  color: $color-text;
+  background-color: $color-white;
+}
+
+// Trava o scroll quando o modal está aberto
+body.is-scroll-locked {
+  overflow: hidden;
+}
+
+::selection {
+  background-color: $color-yellow;
+  color: $color-navy;
+}
+
+:focus-visible {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
+.sr-only {
+  @include visually-hidden;
+}

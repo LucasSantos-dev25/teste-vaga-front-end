@@ -1,0 +1,125 @@
+@use '@/styles/abstracts' as *;
+
+.showcase {
+  padding-block: $space-10;
+}
+
+// ---------- Abas ----------
+.tabs {
+  display: flex;
+  margin-top: $space-4;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.tabItem {
+  flex: 1 0 auto;
+
+  // bordas coladas: só a primeira tem borda esquerda
+  & + & .tab {
+    border-left: 0;
+  }
+}
+
+.tab {
+  @include button-reset;
+  width: 100%;
+  min-width: 8rem;
+  height: 2.5rem;
+  padding-inline: $space-4;
+  border: 1px solid $color-gray-300;
+  font-size: $fs-xs;
+  font-weight: $fw-regular;
+  color: $color-text;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color $transition-fast;
+
+  @include hover {
+    color: $color-primary;
+  }
+}
+
+.tabActive {
+  font-weight: $fw-bold;
+  color: $color-primary;
+}
+
+// ---------- "Ver todos" ----------
+.viewAll {
+  display: block;
+  width: fit-content;
+  margin: $space-2 auto 0;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  color: $color-text;
+
+  @include hover {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+}
+
+.content {
+  margin-top: $space-6;
+}
+
+// ---------- Estados ----------
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-3;
+  padding-block: $space-12;
+  font-size: $fs-sm;
+  color: $color-text-muted;
+  text-align: center;
+}
+
+.retry {
+  @include button-reset;
+  padding: $space-2 $space-5;
+  border-radius: $radius-sm;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+}
+
+.skeleton {
+  display: grid;
+  grid-template-columns: 78%;
+  gap: $space-5;
+  padding-block: $space-3 $space-6;
+  overflow: hidden;
+
+  @include up('sm') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include up('md') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include up('lg') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.skeletonCard {
+  height: 30rem;
+  border-radius: $radius-md;
+  background: linear-gradient(90deg, $color-gray-100 25%, $color-gray-200 50%, $color-gray-100 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}

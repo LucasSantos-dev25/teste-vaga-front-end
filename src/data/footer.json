@@ -1,0 +1,39 @@
+{
+  "newsletter": {
+    "title": "Inscreva-se na nossa newsletter",
+    "description": "Assine a nossa newsletter e receba as novidades e conteúdos exclusivos da Econverse."
+  },
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "socials": [
+    { "label": "Instagram", "href": "#", "icon": "instagram" },
+    { "label": "Facebook", "href": "#", "icon": "facebook" },
+    { "label": "LinkedIn", "href": "#", "icon": "linkedin" }
+  ],
+  "columns": [
+    {
+      "title": "Institucional",
+      "links": [
+        { "label": "Sobre Nós", "href": "#" },
+        { "label": "Movimento", "href": "#" },
+        { "label": "Trabalhe conosco", "href": "#" }
+      ]
+    },
+    {
+      "title": "Ajuda",
+      "links": [
+        { "label": "Suporte", "href": "#" },
+        { "label": "Fale Conosco", "href": "#" },
+        { "label": "Perguntas Frequentes", "href": "#" }
+      ]
+    },
+    {
+      "title": "Termos",
+      "links": [
+        { "label": "Termos e Condições", "href": "#" },
+        { "label": "Política de Privacidade", "href": "#" },
+        { "label": "Troca e Devolução", "href": "#" }
+      ]
+    }
+  ],
+  "copyright": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}

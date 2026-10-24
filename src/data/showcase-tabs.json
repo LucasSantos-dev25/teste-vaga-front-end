@@ -1,0 +1,8 @@
+[
+  { "id": "celular", "label": "Celular" },
+  { "id": "acessorios", "label": "Acessórios" },
+  { "id": "tablets", "label": "Tablets" },
+  { "id": "notebooks", "label": "Notebooks" },
+  { "id": "tvs", "label": "TVs" },
+  { "id": "todos", "label": "Ver todos" }
+]

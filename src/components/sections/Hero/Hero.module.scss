@@ -1,0 +1,52 @@
+@use '@/styles/abstracts' as *;
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 20rem;
+  // Overlay escuro + imagem (fallback em gradiente se a imagem não existir)
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, 0.2) 100%),
+    var(--hero-image) center / cover no-repeat,
+    linear-gradient(120deg, #1b1b2f 0%, #2b2f6b 55%, #0f3d63 100%);
+  color: $color-white;
+
+  @include up('md') {
+    min-height: 24.375rem; // 390px
+  }
+}
+
+.content {
+  padding-block: $space-12;
+}
+
+.title {
+  max-width: 36rem;
+  font-size: $fs-xl;
+  font-weight: $fw-semibold;
+  line-height: 1.1;
+
+  @include up('md') {
+    font-size: $fs-3xl;
+  }
+}
+
+.subtitle {
+  margin-top: $space-3;
+  font-size: $fs-md;
+  font-weight: $fw-regular;
+
+  strong {
+    font-weight: $fw-bold;
+    color: $color-yellow;
+  }
+
+  @include up('md') {
+    font-size: $fs-xl;
+  }
+}
+
+.cta {
+  margin-top: $space-10;
+}
